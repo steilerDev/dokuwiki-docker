@@ -3,7 +3,7 @@ name: Build & Publish
 on: [push, pull_request]
 
 env:
-  PKG_NAME: docker-base
+  PKG_NAME: ${{ github.event.repository.name }}
 #  NODE_VERSION: 17
 
 # Required secrets:
