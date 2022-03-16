@@ -3,7 +3,7 @@ name: Build & Publish
 on: [push, pull_request]
 
 env:
-  PKG_NAME: ${{ github.event.repository.name }}
+  PKG_NAME: dokuwiki
 #  NODE_VERSION: 17
 
 # Required secrets:
