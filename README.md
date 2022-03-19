@@ -55,7 +55,7 @@ The following paths are recommended for persisting state and/or accessing config
     A folder directly serving the content through the endpoint `/static-docs`
 
 # docker-compose example
-Usage with `nginx-proxy` inside of predefined `steilerGroup` network, with [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy) and [acme-companion](https://github.com/nginx-proxy/acme-companion). The php container needs to have `opcache mbstring xml intl json curl fileinfo pcntl` installed ([see documentation](https://www.dokuwiki.org/requirements)). I've created a purpose build image for this: [steilerdev/php:7-wiki](https://github.com/steilerDev/php-docker).
+Usage with `nginx-proxy` inside of predefined `steilerGroup` network, with [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy) and [acme-companion](https://github.com/nginx-proxy/acme-companion). The php container is expected to provide php-fpm from `wiki_php:9000` and needs to have `opcache mbstring xml intl json curl fileinfo pcntl` installed ([see documentation](https://www.dokuwiki.org/requirements)). I've created a purpose build image for this: [steilerdev/php:7-wiki](https://github.com/steilerDev/php-docker).
 
 ```
 version: '2'
