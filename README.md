@@ -49,8 +49,10 @@ The following paths are recommended for persisting state and/or accessing config
     All data that is written by DokuWiki is stored here (see [savedir](https://www.dokuwiki.org/config:savedir)),
   - `/conf`  
     [Configuration](https://www.dokuwiki.org/devel:configuration) data is stored here
-  - `/site`  
-    The [Dokuwiki Root Directory](https://www.dokuwiki.org/devel:dirlayout)
+  - `/site/lib/plugins`  
+    [Plugins](https://www.dokuwiki.org/plugins) are persisted here between upgrades
+  - `/site/lib/tpl`  
+    [Templates](https://www.dokuwiki.org/template) are persisted here between upgrades
   - `/static-docs`  
     A folder directly serving the content through the endpoint `/static-docs`
 
@@ -78,7 +80,8 @@ services:
     volumes:
       - "/opt/docker/wiki/volumes/data:/data"
       - "/opt/docker/wiki/volumes/conf:/conf"
-      - "/opt/docker/wiki/volumes/site:/site"
+      - "/opt/docker/wiki/volumes/plugins:/site/lib/plugins"
+      - "/opt/docker/wiki/volumes/templates:/site/lib/tpl"
       - "/opt/docker/wiki/volumes/static-docs:/static-docs"
   wiki_php:
     image: steilerdev/php:7-wiki
