@@ -49,7 +49,7 @@ jobs:
     - name: Push to DockerHub
       run: docker image push --all-tags $DOCKER_USERNAME/$PKG_NAME
     - name: Update DockerHub readme
-      uses: peter-evans/dockerhub-description@v2
+      uses: peter-evans/dockerhub-description@v3
       with:
         username: ${{ env.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PWD }}
