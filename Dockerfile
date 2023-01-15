@@ -32,4 +32,4 @@ ADD rootfs.tar.gz /
 RUN chmod +x /docker-entrypoint.d/30_init-doku.sh
 
 # Exposing volume for other containers
-VOLUME /site /data /conf /static-doc
+VOLUME /site /data /conf /static-docs
