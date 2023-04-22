@@ -2,7 +2,7 @@ FROM nginx:latest
 
 MAINTAINER Frank Steiler <frank@steilerdev.de>
 # Could also be 'stable'
-ARG VERSION="2022-07-31a"
+ARG VERSION="2023-04-04"
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
