@@ -1,3 +1,7 @@
+# No longer maintained!
+
+[Dokuwiki has started publishing an official Docker image](https://github.com/dokuwiki/docker) - use this instead: https://hub.docker.com/r/dokuwiki/dokuwiki
+
 # Docker Container for DokuWiki
 A Docker Container for [dokuwiki](https://www.dokuwiki.org/dokuwiki) with sensible default configuration.
 
